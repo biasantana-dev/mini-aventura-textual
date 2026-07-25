@@ -15,7 +15,8 @@ body {
 .container {
    display: flex;
    flex-direction: column;
-   max-width: 370px;
+   width: 90%;
+   max-width: 500px;
    margin: 30px auto;
    gap: 18px;
 }
@@ -62,6 +63,12 @@ img {
    clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
 }
 
+#box-botoes {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
 .btn-escolhas {
    display: flex;
    flex-direction: row;
@@ -73,34 +80,12 @@ img {
       0 0 1px #00f2ea21,
       inset 0 0 1px #00f2ea18,
       inset 0 0 1px 1px #00f2ea;
-   transition: transform 0.1s ease, filter 0.1s ease;
+   transition: transform 0.1s ease, filter 0.1s ease, background-color 0.2s;
    border-radius: 2px;
-
    border: none;
    text-align: left;
    color: inherit;
    padding: 0;
-}
-
-.btn-escolhas:hover {
-   background-color: #00f2ea0d;
-   box-shadow:
-      0 0 1px #FEED01,
-      inset 0 0 1px #FEED01,
-      inset 0 0 1px 1px #FEED01;
-   transform: scale(1.01);
-   cursor: pointer;
-}
-
-.btn-escolhas:active {
-   transform: scale(0.98) translateY(2px);
-}
-
-
-.paragrafo-btn {
-   font-size: 1.2em;
-   line-height: 1.4em;
-   color: #fff;
 }
 
 .destaque-btn {
@@ -114,10 +99,82 @@ img {
    align-items: center;
    justify-content: center;
    border-radius: 2px 0 0 2px;
-
+   transition: background-color 0.2s;
 }
 
-.btn-escolhas:hover .destaque-btn,
+.paragrafo-btn {
+   font-size: 1.2em;
+   line-height: 1.4em;
+   color: #fff;
+}
+
+.btn-escolhas:active {
+   transform: scale(0.98) translateY(2px);
+}
+
 .btn-escolhas:active .destaque-btn {
-    background-color: #FEED01;
+   background-color: #FEED01;
+}
+
+@media (hover: hover) {
+   .btn-escolhas:hover {
+      background-color: #00f2ea0d;
+      box-shadow:
+         0 0 1px #FEED01,
+         inset 0 0 1px #FEED01,
+         inset 0 0 1px 1px #FEED01;
+      transform: scale(1.01);
+      cursor: pointer;
+   }
+
+   .btn-escolhas:hover .destaque-btn {
+      background-color: #FEED01;
+   }
+}
+
+@media (min-width: 768px) {
+   .container {
+      max-width: 850px;
+      margin: 20px auto 40px;
+      gap: 20px;
+   }
+
+   header {
+      padding: 6px 0;
+   }
+
+   img {
+      max-height: 400px;
+      width: 100%;
+      object-fit: cover;
+   }
+
+   h1 {
+      font-size: 2.05em;
+   }
+
+   h2 {
+      font-size: 1.8em;
+      margin-bottom: -2px;
+   }
+
+   p {
+      font-size: 1em;
+   }
+
+   #paragrafo-container {
+      padding: 30px 40px;
+   }
+
+   #box-botoes {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: space-between;
+   }
+
+   .btn-escolhas {
+      flex: 1;
+      margin-bottom: 0;
+   }
 }
