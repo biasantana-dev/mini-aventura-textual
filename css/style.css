@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Orbitron:wght@400..900&display=swap');
 
 * {
    margin: 0;
@@ -8,75 +8,114 @@
 }
 
 body {
-   font-family: "Orbitron", sans-serif;
    background-color: #0d0d0df8;
-   font-family: "Share Tech Mono", monospace;
+   font-family: "Fira Code", monospace;
 }
 
 .container {
    display: flex;
    flex-direction: column;
-   max-width: 800px;
-   width: 88%;
+   max-width: 370px;
    margin: 30px auto;
    gap: 18px;
 }
 
-.img-container {
-   object-fit: cover;
+header {
+   background-color: #FEED01;
+   padding: 10px 0;
 }
 
-img {
-   max-width: 100%;
-   height: auto;
-   display: block;
-   clip-path: polygon(25px 0, calc(100% - 25px) 0, 100% 25px, 100% calc(100% - 25px), calc(100% - 25px) 100%, 25px 100%, 0 calc(100% - 25px), 0 25px);
+h1,
+h2,
+.destaque-btn {
+   font-family: "Orbitron", sans-serif;
 }
 
 h1 {
-   color: #FEED01;
+   color: #0d0d0df8;
    font-size: 1.8em;
    text-align: center;
-   font-weight: 700;
+}
+
+h2 {
+   color: #00F2EA;
+   text-align: center;
+   font-size: 1.35em;
+   margin-bottom: -10px;
 }
 
 p {
    color: white;
-   line-height: 1.5em;
+   line-height: 1.6em;
+   font-size: 0.96em;
+}
+
+img {
+   max-width: 100%;
+   display: block;
+   margin: 1px auto;
+   clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
 }
 
 #paragrafo-container {
-   background-color: #cbf9f807;
+   background-color: #00f2ea0a;
    padding: 30px;
-   clip-path: polygon(25px 0, calc(100% - 25px) 0, 100% 25px, 100% calc(100% - 25px), calc(100% - 25px) 100%, 25px 100%, 0 calc(100% - 25px), 0 25px);
+   clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
 }
 
 .btn-escolhas {
    display: flex;
    flex-direction: row;
-   background-color: #cbf9f807;
+   height: auto;
+   background-color: #00f2ea0a;
    align-items: center;
    gap: 10px;
-   clip-path: polygon(15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px), 0 15px);
+   box-shadow:
+      0 0 1px #00f2ea21,
+      inset 0 0 1px #00f2ea18,
+      inset 0 0 1px 1px #00f2ea;
+   transition: transform 0.1s ease, filter 0.1s ease;
+
+   border: none;
+   text-align: left;
+   color: inherit;
+   padding: 0;
 }
 
 .btn-escolhas:hover {
-   background-color: #efefef6c;
+   background-color: #00f2ea0d;
+   box-shadow:
+      0 0 1px #FEED01,
+      inset 0 0 1px #FEED01,
+      inset 0 0 1px 1px #FEED01;
+   transform: scale(1.01);
    cursor: pointer;
 }
 
-.btn-escolhas:hover button {
-   background-color: #FEED01;
-   cursor: pointer;
+.btn-escolhas:active {
+   transform: scale(0.98) translateY(2px);
 }
 
 
-button {
+.paragrafo-btn {
+   font-size: 1.2em;
+   line-height: 1.4em;
+   color: #fff;
+}
+
+.destaque-btn {
    background-color: #00F2EA;
-   width: 150px;
-   height: 65px;
-   font-family: "Share Tech Mono", monospace;
+   font-weight: 700;
+   padding: 25px 15px;
+   flex-shrink: 0;
    font-size: 1em;
-   border: transparent;
-   transition: background-color 0.1s ease;
+   color: #0d0d0df8;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.btn-escolhas:hover .destaque-btn,
+.btn-escolhas:active .destaque-btn {
+    background-color: #FEED01;
 }
