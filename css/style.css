@@ -41,7 +41,6 @@ h2 {
    color: #00F2EA;
    text-align: center;
    font-size: 1.35em;
-   margin-bottom: -10px;
 }
 
 p {
@@ -53,28 +52,29 @@ p {
 img {
    max-width: 100%;
    display: block;
-   margin: 1px auto;
+   margin: auto;
    clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
 }
 
 #paragrafo-container {
    background-color: #00f2ea0a;
-   padding: 30px;
+   padding: 20px 30px;
    clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
 }
 
 .btn-escolhas {
    display: flex;
    flex-direction: row;
-   height: auto;
    background-color: #00f2ea0a;
    align-items: center;
+   margin-bottom: -10px;
    gap: 10px;
    box-shadow:
       0 0 1px #00f2ea21,
       inset 0 0 1px #00f2ea18,
       inset 0 0 1px 1px #00f2ea;
    transition: transform 0.1s ease, filter 0.1s ease;
+   border-radius: 2px;
 
    border: none;
    text-align: left;
@@ -106,13 +106,15 @@ img {
 .destaque-btn {
    background-color: #00F2EA;
    font-weight: 700;
-   padding: 25px 15px;
+   padding: 18px 15px;
    flex-shrink: 0;
    font-size: 1em;
    color: #0d0d0df8;
    display: flex;
    align-items: center;
    justify-content: center;
+   border-radius: 2px 0 0 2px;
+
 }
 
 .btn-escolhas:hover .destaque-btn,
