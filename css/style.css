@@ -10,7 +10,7 @@
 body {
    font-family: "Orbitron", sans-serif;
    background-color: #0d0d0df8;
-    font-family: "Share Tech Mono", monospace;
+   font-family: "Share Tech Mono", monospace;
 }
 
 .container {
@@ -23,10 +23,7 @@ body {
 }
 
 .img-container {
-   padding: 10px;
-   display: flex;
    object-fit: cover;
-   justify-content: center;
 }
 
 img {
@@ -48,29 +45,38 @@ p {
    line-height: 1.5em;
 }
 
-
-
-
 #paragrafo-container {
-   border: 1px solid transparent;
-   background-color: #0d0d0d84;
+   background-color: #cbf9f807;
    padding: 30px;
    clip-path: polygon(25px 0, calc(100% - 25px) 0, 100% 25px, 100% calc(100% - 25px), calc(100% - 25px) 100%, 25px 100%, 0 calc(100% - 25px), 0 25px);
 }
 
 .btn-escolhas {
    display: flex;
-   flex-direction: row;   background-color: #0d0d0d84;
-
+   flex-direction: row;
+   background-color: #cbf9f807;
    align-items: center;
    gap: 10px;
    clip-path: polygon(15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px), 0 15px);
 }
 
+.btn-escolhas:hover {
+   background-color: #efefef6c;
+   cursor: pointer;
+}
 
+.btn-escolhas:hover button {
+   background-color: #FEED01;
+   cursor: pointer;
+}
 
 
 button {
-   width: 30%;
-   padding: 25px;
+   background-color: #00F2EA;
+   width: 150px;
+   height: 65px;
+   font-family: "Share Tech Mono", monospace;
+   font-size: 1em;
+   border: transparent;
+   transition: background-color 0.1s ease;
 }
