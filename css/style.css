@@ -116,6 +116,12 @@ img {
    background-color: #FEED01;
 }
 
+#box-reiniciar {
+   display: none;
+   justify-content: center;
+   margin-top: 20px;
+}
+
 @media (hover: hover) {
    .btn-escolhas:hover {
       background-color: #00f2ea0d;
