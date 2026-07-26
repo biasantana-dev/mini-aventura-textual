@@ -6,7 +6,6 @@ const botao2 = document.getElementById('btn2');
 const textoBtn1 = document.getElementById('escolha-1');
 const textoBtn2 = document.getElementById('escolha-2');
 
-
 const cenaInicial = {
    titulo: 'Saguão da Corporação Nexus',
    imagem: 'img/saguão.jpg',
@@ -14,6 +13,28 @@ const cenaInicial = {
    escolha1: 'Fugir pelos becos escuros do subsolo.',
    escolha2: 'Subir pelo elevador de serviço em direção aos telhados.'
 }; 
+
+const cenaBeco = {
+   titulo: 'O Beco Escuro',
+   imagem: 'img/beco-escuro.jpg',
+   narrativa: 'O subsolo é úmido e mal iluminado. No meio do caminho, você dá de cara com membros de uma gangue cibernética local bloqueando a passagem.',
+   escolha1: 'Tentar negociar entregando seus créditos (dinheiro).',
+   escolha2: 'Sacar sua arma e tentar abrir caminho à força.'
+};
+
+const cenaTelhado = {
+   titulo: 'Os Telhados',
+   imagem: 'img/telhado.jpg',
+   narrativa: 'A chuva bate forte no telhado. Você precisa pular para o prédio vizinho, mas um drone de segurança está patrulhando a área.', 
+   escolha1: 'Tentar hackear o drone rapidamente.',
+   escolha2: 'Esperar o drone virar e tentar correr e pular.'
+};
+
+const final1 = {
+   titulo: 'Missão Cumprida' ,
+   imagem: 'img/missao-cumprida.jpg',
+   narrativa: 'Você consegue despistar as ameaças, alcança o ponto de extração e entrega os dados.',
+};
 
 function carregarCena(cenaAtual) {
    textoTitulo.innerText = cenaAtual.titulo;
